@@ -1,6 +1,6 @@
 """
 This script uses the total PBE/B3LYP dataset (relative energies) with partial charges to fit a neural network.
-It uses Gridsearch and is not parallelised.
+It uses random search from scikit learn.
 """
 
 import ImportData
