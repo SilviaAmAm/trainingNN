@@ -17,3 +17,15 @@ It contains all the b3lyp datapoints that were generated (17750 data points).
 ### pbe_b3lyp_partQ_rel.csv
 
 This file is the same as pbe_b3lyp_partQ.csv, but now the energies are relative rather than absolute.
+
+### data_coul.csv
+
+This file contains on each line the randomly sorted coulomb matrix (4 repetitions) already scaled and the relative energy difference between PBE and B3LYP.
+
+### data_pccm.csv
+
+This file contains on each line the partial charge coulomb matrix (4 repetitions) already scaled and the relative energy difference between PBE and B3LYP.
+
+### data_pccm24.csv
+
+This file contains on each line the partial charge coulomb matrix (but where the diagonal elements are raised to the 2.4) already scaled and the relative energy difference between PBE and B3LYP.
