@@ -6,19 +6,27 @@ strategy:
 
 search_space:
   learning_rate_init:
-    min: 0.0001
-    max: 0.05
+    min: 0.00001
+    max: 0.005
     type: float
 
   alpha:
-    min: 0.2
-    max: 0.3
+    min: 0.001
+    max: 0.1
     type: float
 
   n_units:
     min: 40
     max: 70
     type: int
+
+  batch_size:
+    min: 50
+    max: 500
+    num: 10
+    type: jump
+    var_type: int
+
 
 cv: 5
 
