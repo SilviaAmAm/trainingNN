@@ -17,18 +17,18 @@ from datetime import datetime
 startTime = datetime.now()
 
 # Importing the data
-X, y, Q = ImportData.loadPd_q("dataSets/pbe_b3lyp_partQ_rel.csv")
+X, y, Q = ImportData.loadPd_q("dataSets/pbe_b3lyp_partQ.csv")
 
 # Creating the CM object
-coulMat = CoulombMatrix.CoulombMatrix(matrixX=X)
-descript, y = coulMat.generateRSCM(y_data=y, numRep=1)
+# coulMat = CoulombMatrix.CoulombMatrix(matrixX=X)
+# descript, y = coulMat.generateRSCM(y_data=y, numRep=1)
 
 # Creating the descriptors
 # PCCM = PartialCharge.PartialCharges(X, y, Q)
 # PCCM.generatePCCM(numRep=3)
 # descriptor, y = PCCM.getPCCM()
 CM = CoulombMatrix.CoulombMatrix(matrixX=X)
-descriptor, y = CM.generateRSCM(y_data=y, numRep=3)
+descriptor, y = CM.generateRSCM(y_data=y, numRep=1)
 
 # Normalising the data
 X_scal = preproc.StandardScaler().fit_transform(descriptor)
