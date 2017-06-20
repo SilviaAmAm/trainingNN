@@ -43,7 +43,7 @@ hypPar.update({"learning_rate_init":[0.00005, 0.0001, 0.0005, 0.001]})
 hypPar.update({"hidden_layer_sizes":[(40,), (46,), (48,), (50,)]})
 hypPar.update({"alpha":[0.255, 0.26, 0.265, 0.270]})
 
-grid_search = modsel.GridSearchCV(estimator=estimator,param_grid=hypPar,cv=cv_iter, n_jobs=2)
+grid_search = modsel.GridSearchCV(estimator=estimator,param_grid=hypPar,cv=cv_iter, n_jobs=4)
 
 # Fitting the model
 grid_search.fit(X_train,y_train)

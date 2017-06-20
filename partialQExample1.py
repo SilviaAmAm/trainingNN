@@ -6,6 +6,7 @@ It uses Gridsearch and is not parallelised.
 import ImportData
 import PartialCharge
 import NNFlow
+import CoulombMatrix
 import plotting
 from sklearn import preprocessing as preproc
 from sklearn import model_selection as modsel
@@ -17,30 +18,34 @@ startTime = datetime.now()
 # Importing the data
 X, y, Q = ImportData.loadPd_q("dataSets/pbe_b3lyp_partQ.csv")
 
+# Creating the CM object
+coulMat = CoulombMatrix.CoulombMatrix(matrixX=X)
+descript, y = coulMat.generateRSCM(y_data=y, numRep=1)
+
 # Creating the descriptors
-descr = PartialCharge.PartialCharges(X, y, Q)
-descr.generatePCCM(numRep=4)
-PCCM, y = descr.getPCCM()
+# descr = PartialCharge.PartialCharges(X, y, Q)
+# descr.generatePCCM(numRep=4)
+# PCCM, y = descr.getPCCM()
 
 # Normalising the data
-X_scal = preproc.StandardScaler().fit_transform(PCCM)
+X_scal = preproc.StandardScaler().fit_transform(descript)
 
 # Split into training and test set
 X_train, X_test, y_train, y_test = modsel.train_test_split(X_scal, y, test_size=0.1)
 
 # Defining the estimator
-estimator = NNFlow.MLPRegFlow(max_iter=30)
+estimator = NNFlow.MLPRegFlow(max_iter=500, batch_size=1000)
 
 # Set up the cross validation set, for doing 5 k-fold validation
 cv_iter = modsel.KFold(n_splits=5)
 
 # Dictionary of hyper parameters to optimise
 hypPar = {}
-hypPar.update({"learning_rate_init":[0.0001,0.001, 0.01]})
-hypPar.update({"hidden_layer_sizes":[(46,), (48,), (50,)]})
-hypPar.update({"alpha":[0.255, 0.26, 0.265]})
+hypPar.update({"learning_rate_init":[0.00005, 0.0001, 0.0002]})
+hypPar.update({"hidden_layer_sizes":[(49,), (50,), (55,)]})
+hypPar.update({"alpha":[ 0.27, 0.29, 0.31]})
 
-grid_search = modsel.GridSearchCV(estimator=estimator,param_grid=hypPar,cv=cv_iter)
+grid_search = modsel.GridSearchCV(estimator=estimator,param_grid=hypPar,cv=cv_iter, n_jobs=2)
 
 # Fitting the model
 grid_search.fit(X_train,y_train)
