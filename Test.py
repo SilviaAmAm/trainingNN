@@ -1,3 +1,7 @@
+"""
+This test checks whether the model can fit some simple functions like a quadratic function.
+"""
+
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
