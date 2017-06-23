@@ -20,15 +20,15 @@ This file is the same as pbe_b3lyp_partQ.csv, but now the energies are relative 
 
 ### data_coul.csv
 
-This file contains on each line the randomly sorted coulomb matrix (4 repetitions) already scaled and the relative energy difference between PBE and B3LYP.The energies are in Ha 
+This file contains on each line the full randomly sorted coulomb matrix (4 repetitions) already scaled and the relative energy difference between PBE and B3LYP. The energies are in Ha.
 
 ### data_pccm.csv
 
-This file contains on each line the partial charge coulomb matrix (4 repetitions) already scaled and the relative energy difference between PBE and B3LYP.The energies are in Ha 
+This file contains on each line the full partial charge coulomb matrix (4 repetitions) already scaled and the relative energy difference between PBE and B3LYP.The energies are in Ha
 
 ### data_pccm24.csv
 
-This file contains on each line the partial charge coulomb matrix (but where the diagonal elements are raised to the 2.4) already scaled and the relative energy difference between PBE and B3LYP.The energies are in Ha 
+This file contains on each line the full partial charge coulomb matrix (but where the diagonal elements are raised to the 2.4) already scaled and the relative energy difference between PBE and B3LYP.The energies are in Ha
 
 ### pbe_b3lyp_Q_test_abs.csv
 
@@ -36,4 +36,23 @@ Since it was noticed that when training with the datased tot-pbe-b3lyp.csv, the 
 
 ### pbe_b3lyp_Q_test_rel.csv
 
-Exactly the same as the above dataset, but the energies are relative.The energies are in Ha 
+Exactly the same as the above dataset, but the energies are relative. The energies are in Ha.
+
+### X_cc.csv, Y_cc.csv, Q_cc.csv
+The configurations, the energies (in Ha) and the partial charges calculated at the unrestricted CCSD(T) level with basis set avtz/mp2fit.
+
+### pbe_cc_Q_abs.csv
+
+This contains the absolute energies (in Hartree) at the CCSD(T) level (avtz basis set) and the PBE energies (STO-3G basis set). The partial charges are calculated at the PBE basis set.
+
+### pbe_cc_Q_rel.csv
+
+Exactly the same as pbe_cc_Q_abs.csv except that the energies are relative instead of absolute.
+
+### b3lyp_cc_Q_abs.csv
+
+This contains the absolute energies (in Hartree) at the CCSD(T) level (avtz basis set) and the b3lyp energies (avtz basis set). The partial charges are calculated at the b3lyp basis set.
+
+### b3lyp_cc_Q_rel.csv
+
+Exactly the same as b3lyp_cc_Q_abs.csv except that the energies are relative instead of absolute.
