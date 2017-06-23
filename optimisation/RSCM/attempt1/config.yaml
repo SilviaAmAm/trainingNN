@@ -6,29 +6,29 @@ strategy:
 
 search_space:
   learning_rate_init:
-    min: 0.00001
-    max: 0.005
+    min: 0.0001
+    max: 0.0003
     type: float
 
   alpha:
-    min: 0.001
-    max: 0.1
+    min: 0.0001
+    max: 0.001
     type: float
 
   n_units:
-    min: 40
-    max: 70
+    min: 50
+    max: 80
     type: int
 
   batch_size:
-    min: 50
-    max: 500
+    min: 300
+    max: 800
     num: 10
     type: jump
     var_type: int
 
 
-cv: 5
+cv: 3
 
 dataset_loader:
   name: dsv

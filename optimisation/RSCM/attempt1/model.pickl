@@ -51,7 +51,7 @@ S'constant'
 p21
 sS'max_iter'
 p22
-I1500
+I1000
 sS'batch_size'
 p23
 S'auto'
