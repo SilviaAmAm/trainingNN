@@ -5,6 +5,9 @@ strategy:
   name: gp
   params:
     seeds: 5
+#    kernels:
+#      - { name : GPy.kern.Matern32, params : {ARD : True}, option s: {independent : False}}
+#    acquisition: { name : ucb, params : {kappa : 2}}
 
 search_space:
   learning_rate_init:
@@ -24,7 +27,7 @@ search_space:
 
   batch_size:
     min: 50
-    max: 600
+    max: 500
     num: 10
     type: jump
     var_type: int
@@ -35,9 +38,9 @@ cv: 3
 dataset_loader:
   name: dsv
   params:
-    filenames: /home/robert/dataSilvia/trim_data_coul.csv
-    usecols: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
-    y_col: 28
+    filenames: /home/robert/dataSilvia/data_dpccm.csv
+    usecols: 0,1,2,3,4,5,6
+    y_col: 7
 
 trials:
     uri: sqlite:///osprey-trials.db
