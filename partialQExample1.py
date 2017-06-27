@@ -27,12 +27,14 @@ X, y, Q = ImportData.loadPd_q("dataSets/pbe_b3lyp_partQ_rel.csv")
 # y = y[0:2000]
 
 # Creating the descriptors
-# PCCM24 = PartialCharge.PartialCharges(X, y, Q)
-# descriptor, y = PCCM24.generatePCCM24(numRep=5)
-CM = CoulombMatrix.CoulombMatrix(matrixX=X)
-descriptor, y = CM.generateRSCM(y_data=y, numRep=5)
+PCCM24 = PartialCharge.PartialCharges(X, y, Q)
+descriptor, y = PCCM24.generatePCCM24(numRep=5)
+# CM = CoulombMatrix.CoulombMatrix(matrixX=X)
+# descriptor, y = CM.generateRSCM(y_data=y, numRep=5)
 # descriptor = CM.generateES()
 # descriptor = CM.generateSCM()
+# PCCM = PartialCharge.PartialCharges(X, y, Q)
+# descriptor, y = PCCM.generatePCCM(numRep=5)
 
 # Normalising the data
 X_scal = preproc.StandardScaler().fit_transform(descriptor)
@@ -41,14 +43,14 @@ X_scal = preproc.StandardScaler().fit_transform(descriptor)
 X_train, X_test, y_train, y_test = modsel.train_test_split(X_scal, y, test_size=0.2)
 
 # Name of the model
-filename = 'SavedModels/RSCM_NN.sav'
+filename = 'SavedModels/PCCM24_NN.sav'
 
 # Checking if a trained model of the NN exists
 if os.path.isfile(filename):
     estimator = pickle.load(open(filename, 'rb'))
 else:
     # Defining the estimator
-    estimator = NNFlow.MLPRegFlow(max_iter=2800, batch_size=600, alpha=0.002, learning_rate_init=0.0005, hidden_layer_sizes=(75,))
+    estimator = NNFlow.MLPRegFlow(max_iter=2800, batch_size=200, alpha=0.0001, learning_rate_init=0.0003, hidden_layer_sizes=(32,))
 
     # Set up the cross validation set, for doing 5 k-fold validation
     cv_iter = modsel.KFold(n_splits=5)
