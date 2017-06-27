@@ -110,4 +110,19 @@ This contains the absolute energies (in Hartree) at the CCSD(T) level (avtz basi
 
 Exactly the same as b3lyp_cc_Q_abs.csv except that the energies are relative instead of absolute.
 
+### data_coul_b3lypcc.csv
+
+This file contains on each line the trimmed randomly sorted coulomb matrix (5 repetitions) already scaled and the relative energy difference between B3LYP and CC. The energies are in Ha.
+
+### data_pccm_b3lypcc.csv
+
+This file contains on each line the trimmed partial charge coulomb matrix (5 repetitions) already scaled and the relative energy difference between B3LYP and CC. The energies are in Ha.
+
+### data_pccm24_b3lypcc.csv
+
+This file contains on each line the trimmed partial charge coulomb matrix (5 repetitions) already scaled and the relative energy difference between B3LYP and CC. The energies are in Ha.
+
+### data_dpccm_b3lypcc.csv
+
+This file contains on each line the diagonal elements of the partial charge coulomb matrix (q_i^2). The X values are already scaled and the relative energy difference between B3LYP and CC. The energies are in Ha.
 
