@@ -1,0 +1,43 @@
+estimator:
+  pickle: model.pickl
+
+strategy:
+  name: random
+
+search_space:
+  learning_rate_init:
+    min: 0.0001
+    max: 0.0003
+    type: float
+
+  alpha:
+    min: 0.0001
+    max: 0.001
+    type: float
+
+  n_units:
+    min: 30
+    max: 80
+    type: int
+
+  batch_size:
+    min: 50
+    max: 500
+    num: 10
+    type: jump
+    var_type: int
+
+
+cv: 3
+
+dataset_loader:
+  name: dsv
+  params:
+    filenames: /home/robert/dataSilvia/trim_data_pccm.csv
+    usecols: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
+    y_col: 28
+
+trials:
+    uri: sqlite:///osprey-trials.db
+
+
