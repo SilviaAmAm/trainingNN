@@ -68,3 +68,7 @@ This file contains on each line the trimmed partial charge coulomb matrix (5 rep
 ### trim_data_pccm24.csv
 
 This file contains on each line the trimmed partial charge coulomb matrix (5 repetitions) already scaled and the relative energy difference between PBE and B3LYP. The energies are in Ha.
+
+### data_dpccm.csv
+
+This file contains on each line the diagonal elements of the partial charge coulomb matrix (q_i^2). The X values are already scaled and the relative energy difference between PBE and B3LYP. The energies are in Ha.
