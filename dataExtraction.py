@@ -1,7 +1,7 @@
 import ImportData
 import numpy as np
 
-# ImportData.MolproToCSV("/Users/walfits/Repositories/trainingdata/per-user-trajectories/CH4+CN/pruning/level1_Molpro", "pbe-sto-3g-u.out")
+# ImportData.MolproToCSV("/Users/walfits/Repositories/trainingdata/per-user-trajectories/CH4+CN/pruning/level2_cc_Molpro", "uCCSD_avtz.out")
 
 X1, y1, Q1 = ImportData.loadPd_q("dataSets/pbe_b3lyp_partQ.csv")
 X3, y3, Q3 = ImportData.loadPd_q("dataSets/pbe_b3lyp_Q_test_abs.csv")

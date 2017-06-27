@@ -53,7 +53,7 @@ print "The best parameters are " + str(grid_search.best_params_)
 print "The best R2 value (on cross val set) obtained is " + str(grid_search.best_score_)
 
 # # Setting the best parameters in the estimator
-# estimator.set_params(alpha=grid_search.best_params_["alpha"])
+estimator.set_params(alpha=grid_search.best_params_["alpha"])
 estimator.fit(X_train,y_train)
 estimator.plotTrainCost()
 
