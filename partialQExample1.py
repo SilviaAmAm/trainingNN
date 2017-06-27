@@ -8,6 +8,7 @@ import ImportData
 import PartialCharge
 import CoulombMatrix
 import NNFlow
+import CoulombMatrix
 import plotting
 from sklearn import preprocessing as preproc
 from sklearn import model_selection as modsel

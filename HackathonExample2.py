@@ -1,6 +1,6 @@
 """
-This script uses the new estimator written in tensorflow, with added gridsearch.
-The hyperparameters are optimised through the gridsearch.
+This script uses the new estimator written in tensorflow, with added gridsearch, to fit the data that was
+used in the hackathon (PBE/B3LYP data set with absolute energies). The hyperparameters are optimised through the gridsearch. The data set contains absolute energies.
 """
 
 import CoulombMatrix
@@ -21,9 +21,9 @@ X, y = ImportData.loadPd("dataSets/tot-pbe-b3lyp.csv")
 # Creating the CM object
 coulMat = CoulombMatrix.CoulombMatrix(matrixX=X)
 #  Creating the three descriptors
-descript = coulMat.generateES()
+# descript = coulMat.generateES()
 # descript = coulMat.generateSCM()
-# descript, y = coulMat.generateRSCM(y_data=y, numRep=1)
+descript, y = coulMat.generateRSCM(y_data=y, numRep=1)
 
 # Normalising the data
 X_scal = preproc.StandardScaler().fit_transform(descript)
@@ -32,7 +32,7 @@ X_scal = preproc.StandardScaler().fit_transform(descript)
 X_train, X_test, y_train, y_test = modsel.train_test_split(X_scal, y, test_size=0.1)
 
 # Defining the estimator
-estimator = NNFlow.MLPRegFlow(max_iter=500, learning_rate_init=0.25, hidden_layer_sizes=(45,), alpha=0.2, batch_size=500)
+estimator = NNFlow.MLPRegFlow(max_iter=500, batch_size=1000)
 
 # Set up the cross validation set, for doing 5 k-fold validation
 cv_iter = modsel.KFold(n_splits=5)
