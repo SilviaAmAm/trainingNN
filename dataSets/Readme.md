@@ -72,6 +72,26 @@ Since it was noticed that when training with the datased tot-pbe-b3lyp.csv, the 
 
 Exactly the same as the above dataset, but the energies are relative. The energies are in Ha.
 
+### test_coulomb_scal.csv
+
+This contains the upper triangular part of an original coulomb matrix, with the last column being the energy difference of the relative energy in PBE and the relative energy in B3LYP.
+The descriptor is scaled but not randomised.
+
+### test_partial_scal.csv
+
+This contains the upper triangular part of a partial charge coulomb matrix, with the last column being the energy difference of the relative energy in PBE and the relative energy in B3LYP.
+The descriptor is scaled but not randomised.
+
+### test_coulomb_notscal.csv
+
+This contains the upper triangular part of an original coulomb matrix, with the last column being the energy difference of the relative energy in PBE and the relative energy in B3LYP.
+The descriptor is not scaled and not randomised.
+
+### test_partial_notscal.csv
+
+This contains the upper triangular part of a partial charge coulomb matrix, with the last column being the energy difference of the relative energy in PBE and the relative energy in B3LYP.
+The descriptor is  not scaled and not randomised.
+
 
 ## PBE_CC
 
@@ -110,7 +130,7 @@ This contains the absolute energies (in Hartree) at the CCSD(T) level (avtz basi
 
 Exactly the same as b3lyp_cc_Q_abs.csv except that the energies are relative instead of absolute.
 
-### data_coul_b3lypcc.csv
+### data_rscm_b3lypcc.csv
 
 This file contains on each line the trimmed randomly sorted coulomb matrix (5 repetitions) already scaled and the relative energy difference between B3LYP and CC. The energies are in Ha.
 
