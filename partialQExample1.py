@@ -19,6 +19,7 @@ import os.path
 
 # Starting the timer
 startTime = datetime.now()
+saveModel = False
 
 # Importing the data
 X, y, Q = ImportData.loadPd_q("dataSets/PBE_B3LYP/pbe_b3lyp_partQ_rel.csv")
@@ -30,37 +31,38 @@ X, y, Q = ImportData.loadPd_q("dataSets/PBE_B3LYP/pbe_b3lyp_partQ_rel.csv")
 # Creating the descriptors
 # PCCM24 = PartialCharge.PartialCharges(X, y, Q)
 # descriptor, y = PCCM24.generatePCCM24(numRep=5)
-# CM = CoulombMatrix.CoulombMatrix(matrixX=X)
+CM = CoulombMatrix.CoulombMatrix(matrixX=X)
 # descriptor, y = CM.generateRSCM(y_data=y, numRep=5)
 # descriptor = CM.generateES()
 # descriptor = CM.generateSCM()
+descriptor, y = CM.generatePRCM(y, numRep=1)
 # PCCM = PartialCharge.PartialCharges(X, y, Q)
 # descriptor, y = PCCM.generatePCCM(numRep=5)
 # DPCCM = PartialCharge.PartialCharges(X, y, Q)
 # descriptor = DPCCM.generateDiagPCCM()
 # descriptor = CoulombMatrix.CoulombMatrix(matrixX=X)
 # X_coul = descriptor.generateTrimmedCM()
-descriptor = PartialCharge.PartialCharges(X, y, Q)
-X_pccm, y_pccm = descriptor.generateUnrandomisedPCCM()
+# descriptor = PartialCharge.PartialCharges(X, y, Q)
+# X_pccm, y_pccm = descriptor.generateUnrandomisedPCCM()
 
 # Normalising the data
-# X_scal = preproc.StandardScaler().fit_transform(X_coul)
+# X_scal = preproc.StandardScaler().fit_transform(descriptor)
+X_scal = descriptor
 # X_scal[:,0] = 0.0
 # X_scal[:,-1] = 0.0
 # X_scal[:,-3] = 0.0
 
 # Split into training and test set
-X_train, X_test, y_train, y_test = modsel.train_test_split(X_pccm, y, test_size=0.2)
-
+X_train, X_test, y_train, y_test = modsel.train_test_split(X_scal, y, test_size=0.2)
 # Name of the model
-filename = 'SavedModels/test_NN4.sav'
+filename = 'SavedModels/PCCM_scal.sav'
 
 # Checking if a trained model of the NN exists
 if os.path.isfile(filename):
     estimator = pickle.load(open(filename, 'rb'))
 else:
     # Defining the estimator
-    estimator = NNFlow.MLPRegFlow(max_iter=2800, batch_size=50, alpha=0.0002, learning_rate_init=0.0005, hidden_layer_sizes=(69,))
+    estimator = NNFlow.MLPRegFlow(max_iter=2800, batch_size=1000, alpha=0.0005, learning_rate_init=0.0002, hidden_layer_sizes=(51,))
 
     # Set up the cross validation set, for doing 5 k-fold validation
     cv_iter = modsel.KFold(n_splits=5)
@@ -68,9 +70,11 @@ else:
     # Training the neural net
     estimator.fit(X_train, y_train, X_test, y_test)
     estimator.plotLearningCurve()
+    estimator.errorDistribution(X_test, y_test)
 
     # Saving the model
-    pickle.dump(estimator, open(filename, 'wb'))
+    if saveModel:
+        pickle.dump(estimator, open(filename, 'wb'))
 
 r2, rmse, mae, lpo, lno = estimator.scoreFull(X_test, y_test)
 print "On test set:"
