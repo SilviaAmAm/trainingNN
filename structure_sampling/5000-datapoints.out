@@ -1,0 +1,73 @@
+2017-07-12 12:38:34.982234: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-12 12:38:34.983971: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-12 12:38:34.983995: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-12 12:38:34.984007: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-12 12:38:34.984019: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-12 12:38:34.994425: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2017-07-12 12:38:34.994492: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: gpu04.bc4.acrc.priv
+2017-07-12 12:38:34.994511: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: gpu04.bc4.acrc.priv
+2017-07-12 12:38:34.994597: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 367.48.0
+2017-07-12 12:38:34.994652: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  367.48  Sat Sep  3 18:21:08 PDT 2016
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+"""
+2017-07-12 12:38:34.994686: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 367.48.0
+2017-07-12 12:38:34.994704: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 367.48.0
+Started the procedure with 5000 samples
+Initialised the Coulomb matrix. 
+
+Generated 5000 by 5000 distance matrix.
+Initialised the Coulomb matrix. 
+
+Initialised the Coulomb matrix. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 1000 iterations. 
+
+Completed 1100 iterations. 
+
+Completed 1200 iterations. 
+
+Completed 1300 iterations. 
+
+Completed 1400 iterations. 
+
+Completed 1500 iterations. 
+
+Completed 1600 iterations. 
+
+Completed 1700 iterations. 
+
+Completed 1800 iterations. 
+
+Completed 1900 iterations. 
+
+For the training with 5000 data points:
+Starting the predictions. 
+
+On test set:
+R^2: 0.978971901332
+rmse (kJ/mol): 7.46041061235
+mae (kJ/mol): 5.7999992259
+The largest positive outlier (kJ/mol): 28.0899382206
+The largest negative outlier (kJ/mol): 18.9327405305
