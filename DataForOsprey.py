@@ -10,13 +10,10 @@ X, y, Q = imdat.loadPd_q('dataSets/PBE_B3LYP/pbe_b3lyp_partQ_rel.csv')
 
 # # Generating coulomb matrix
 descr1 = CoulombMatrix.CoulombMatrix(matrixX=X)
-
 X_coul, y_coul = descr1.generatePRCM(y,numRep=4)
 # X_coul, y_coul = descr1.generateRSCM(y_data=y, numRep=5)
 # X_coul_scal = preproc.StandardScaler().fit_transform(X_coul)
 # y_coul = np.reshape(y_coul, (len(y_coul), 1))
-
-
 # descr1 = CoulombMatrix.CoulombMatrix(matrixX=X)
 # X_coul = descr1.generateTrimmedCM()
 # X_coul_scal = preproc.StandardScaler().fit_transform(X_coul)
@@ -27,6 +24,7 @@ X_coul, y_coul = descr1.generatePRCM(y,numRep=4)
 y_coul = np.reshape(y_coul, (len(y_coul), 1))
 
 # y_coul = np.reshape(y, (len(y), 1))
+y_coul = np.reshape(y_coul, (len(y_coul),1))
 
 
 #
@@ -57,13 +55,12 @@ y_coul = np.reshape(y_coul, (len(y_coul), 1))
 # data_pccm = np.append(X_pccm_scal, y_pccm, axis=1)
 # data_pccm24 = np.append(X_pccm24_scal, y_pccm24, axis=1)
 # data_dpccm = np.append(X_dpccm_scal, y_dpccm, axis=1)
-data_coul = np.append(X_coul, y_coul, axis=1)
+data_coul = np.append(X_coul_scal, y_coul, axis=1)
 # data_pccm = np.append(X_pccm, y_pccm, axis=1)
 
 #
 # # Saving datasets to files
-outfile1 = open('dataSets/PBE_B3LYP/data_rscm_pbeb3lyp.csv', 'w')
-
+outfile1 = open('dataSets/PBE_B3LYP/prcm_small_scal_pbeb3lyp.csv', 'w')
 # outfile2 = open('dataSets/B3LYP_CC/data_pccm_b3lypcc.csv', 'w')
 # outfile3 = open('dataSets/B3LYP_CC/data_pccm24_b3lypcc.csv', 'w')
 # outfile4 = open('dataSets/B3LYP_CC/data_dpccm_b3lypcc.csv', 'w')

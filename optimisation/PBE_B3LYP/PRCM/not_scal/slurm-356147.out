@@ -1,0 +1,344 @@
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/grid_search.py:43: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. This module will be removed in 0.20.
+  DeprecationWarning)
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/grid_search.py:43: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. This module will be removed in 0.20.
+  DeprecationWarning)
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.1.0
+time:                July 09, 2017 12:32 PM
+hostname:            gpu07.bc4.acrc.priv
+cwd:                 /mnt/storage/home/sa16246/repositories/trainingNN/optimisation/PBE_B3LYP/PRCM/not_scal
+pid:                 10159
+
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.1.0
+time:                July 09, 2017 12:32 PM
+hostname:            gpu10.bc4.acrc.priv
+cwd:                 /mnt/storage/home/sa16246/repositories/trainingNN/optimisation/PBE_B3LYP/PRCM/not_scal
+pid:                 18161
+
+Loading config file:     config.yaml...
+Loading config file:     config.yaml...
+
+Loading dataset...
+
+
+Loading dataset...
+
+Dataset contains 71004 element(s) with  labels
+The elements have shape: [(28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), ...]
+Instantiated estimator:
+  MLPRegFlow(alpha=0.0001, batch_size='auto', beta_1=0.9, beta_2=0.999,
+      early_stopping=False, epsilon=1e-08, hidden_layer_sizes=(45,),
+      learning_rate='constant', learning_rate_init=0.001, max_iter=1000,
+      momentum=0.9, n_units=None, nesterovs_momentum=True, power_t=0.5,
+      random_state=None, shuffle=True, tol=0.0001, validation_fraction=0.1,
+      verbose=False)
+Hyperparameter search space:
+  alpha                    	(float) 0.000010 <= x <  0.001000
+  learning_rate_init       	(float) 0.000100 <= x <  0.000500
+  batch_size               	(enum)    choices = (50, 111, 172, 233, 294, 355, 416, 477, 538, 600)
+  n_units                  	(int)         30 <= x <= 80
+
+----------------------------------------------------------------------
+Beginning iteration                                              1 / 5
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+Dataset contains 71004 element(s) with  labels
+The elements have shape: [(28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), ...]
+Instantiated estimator:
+  MLPRegFlow(alpha=0.0001, batch_size='auto', beta_1=0.9, beta_2=0.999,
+      early_stopping=False, epsilon=1e-08, hidden_layer_sizes=(45,),
+      learning_rate='constant', learning_rate_init=0.001, max_iter=1000,
+      momentum=0.9, n_units=None, nesterovs_momentum=True, power_t=0.5,
+      random_state=None, shuffle=True, tol=0.0001, validation_fraction=0.1,
+      verbose=False)
+Hyperparameter search space:
+  alpha                    	(float) 0.000010 <= x <  0.001000
+  learning_rate_init       	(float) 0.000100 <= x <  0.000500
+  batch_size               	(enum)    choices = (50, 111, 172, 233, 294, 355, 416, 477, 538, 600)
+  n_units                  	(int)         30 <= x <= 80
+
+----------------------------------------------------------------------
+Beginning iteration                                              1 / 5
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 5 trials
+Choosing next hyperparameters with gp...
+History contains: 5 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.001, 'batch_size': 355, 'learning_rate_init': 0.00011239736272616843, 'n_units': 37}
+(gp took 16.614 s)
+
+Starting the fitting process ... 
+
+2017-07-09 12:33:15.081314: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:15.081442: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:15.081475: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:15.081501: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:15.081526: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:15.087743: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2017-07-09 12:33:15.087819: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: gpu07.bc4.acrc.priv
+2017-07-09 12:33:15.087829: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: gpu07.bc4.acrc.priv
+2017-07-09 12:33:15.087891: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 367.48.0
+2017-07-09 12:33:15.087925: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  367.48  Sat Sep  3 18:21:08 PDT 2016
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+"""
+2017-07-09 12:33:15.087961: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 367.48.0
+2017-07-09 12:33:15.087969: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 367.48.0
+Completed 0 iterations. 
+
+  {'alpha': 0.001, 'batch_size': 355, 'learning_rate_init': 0.00011239741162259208, 'n_units': 37}
+(gp took 21.842 s)
+
+Starting the fitting process ... 
+
+2017-07-09 12:33:20.382980: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:20.383030: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:20.383038: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:20.383043: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:20.383048: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-09 12:33:20.389283: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2017-07-09 12:33:20.389345: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: gpu10.bc4.acrc.priv
+2017-07-09 12:33:20.389356: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: gpu10.bc4.acrc.priv
+2017-07-09 12:33:20.389421: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 367.48.0
+2017-07-09 12:33:20.389454: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  367.48  Sat Sep  3 18:21:08 PDT 2016
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+"""
+2017-07-09 12:33:20.389476: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 367.48.0
+2017-07-09 12:33:20.389485: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 367.48.0
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  4.6min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.953928
+(best score so far   = 0.957077)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                              2 / 5
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 7 trials
+Choosing next hyperparameters with gp...
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  4.6min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.953431
+(best score so far   = 0.957077)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                              2 / 5
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 7 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.0006295765592881302, 'batch_size': 294, 'learning_rate_init': 0.00023102695207310845, 'n_units': 63}
+(gp took 7.314 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+  {'alpha': 0.00067429311591585338, 'batch_size': 294, 'learning_rate_init': 0.00024658722445189559, 'n_units': 67}
+(gp took 7.098 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 900 iterations. 
+
