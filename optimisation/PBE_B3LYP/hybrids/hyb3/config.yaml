@@ -1,0 +1,44 @@
+estimator:
+  pickle: model.pickl
+
+strategy:
+  name: gp
+  params:
+    seeds: 5
+
+search_space:
+  learning_rate_init:
+    min: 0.0001
+    max: 0.0005
+    type: float
+
+  alpha:
+    min: 0.00001
+    max: 0.001
+    type: float
+
+  n_units:
+    min: 10
+    max: 60
+    type: int
+
+  batch_size:
+    min: 50
+    max: 600
+    num: 10
+    type: jump
+    var_type: int
+
+
+cv: 3
+
+dataset_loader:
+  name: dsv
+  params:
+    filenames: /mnt/storage/home/sa16246/repositories/trainingNN/optimisation/PBE_B3LYP/hybrids/hyb3/hyb3.csv
+    usecols: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34
+    y_col: 35
+
+trials:
+    uri: sqlite:///osprey-trials.db
+

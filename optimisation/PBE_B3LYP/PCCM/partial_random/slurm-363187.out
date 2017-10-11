@@ -1,0 +1,1983 @@
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/grid_search.py:43: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. This module will be removed in 0.20.
+  DeprecationWarning)
+/mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/sklearn/grid_search.py:43: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. This module will be removed in 0.20.
+  DeprecationWarning)
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.1.0
+time:                July 19, 2017  1:13 PM
+hostname:            gpu05.bc4.acrc.priv
+cwd:                 /mnt/storage/home/sa16246/repositories/trainingNN/optimisation/PBE_B3LYP/PCCM/partial_random
+pid:                 20051
+
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.1.0
+time:                July 19, 2017  1:13 PM
+hostname:            gpu10.bc4.acrc.priv
+cwd:                 /mnt/storage/home/sa16246/repositories/trainingNN/optimisation/PBE_B3LYP/PCCM/partial_random
+pid:                 17411
+
+Loading config file:     config.yaml...
+Loading config file:     config.yaml...
+
+Loading dataset...
+
+
+Loading dataset...
+
+Dataset contains 88755 element(s) with  labels
+The elements have shape: [(28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), ...]
+Instantiated estimator:
+  MLPRegFlow(alpha=0.0001, batch_size='auto', beta_1=0.9, beta_2=0.999,
+      early_stopping=False, epsilon=1e-08, hidden_layer_sizes=(45,),
+      learning_rate='constant', learning_rate_init=0.001, max_iter=1000,
+      momentum=0.9, n_units=None, nesterovs_momentum=True, power_t=0.5,
+      random_state=None, shuffle=True, tol=0.0001, validation_fraction=0.1,
+      verbose=False)
+Hyperparameter search space:
+  alpha                    	(float) 0.000010 <= x <  0.001000
+  learning_rate_init       	(float) 0.000100 <= x <  0.000500
+  batch_size               	(enum)    choices = (50, 111, 172, 233, 294, 355, 416, 477, 538, 600)
+  n_units                  	(int)         30 <= x <= 80
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 0 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.0008724642683729588, 'batch_size': 477, 'learning_rate_init': 0.00036329839229564195, 'n_units': 47}
+(gp took 0.000 s)
+
+Starting the fitting process ... 
+
+2017-07-19 13:13:28.805129: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:28.805164: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:28.805170: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:28.805178: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:28.805183: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:28.833547: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2017-07-19 13:13:28.833580: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: gpu10.bc4.acrc.priv
+2017-07-19 13:13:28.833588: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: gpu10.bc4.acrc.priv
+2017-07-19 13:13:28.833637: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 367.48.0
+2017-07-19 13:13:28.833666: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  367.48  Sat Sep  3 18:21:08 PDT 2016
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+"""
+2017-07-19 13:13:28.833685: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 367.48.0
+2017-07-19 13:13:28.833693: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 367.48.0
+Dataset contains 88755 element(s) with  labels
+The elements have shape: [(28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), (28,), ...]
+Instantiated estimator:
+  MLPRegFlow(alpha=0.0001, batch_size='auto', beta_1=0.9, beta_2=0.999,
+      early_stopping=False, epsilon=1e-08, hidden_layer_sizes=(45,),
+      learning_rate='constant', learning_rate_init=0.001, max_iter=1000,
+      momentum=0.9, n_units=None, nesterovs_momentum=True, power_t=0.5,
+      random_state=None, shuffle=True, tol=0.0001, validation_fraction=0.1,
+      verbose=False)
+Hyperparameter search space:
+  alpha                    	(float) 0.000010 <= x <  0.001000
+  learning_rate_init       	(float) 0.000100 <= x <  0.000500
+  batch_size               	(enum)    choices = (50, 111, 172, 233, 294, 355, 416, 477, 538, 600)
+  n_units                  	(int)         30 <= x <= 80
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 1 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.0003483732663173504, 'batch_size': 600, 'learning_rate_init': 0.00027493766548406873, 'n_units': 74}
+(gp took 0.002 s)
+
+Completed 0 iterations. 
+
+Starting the fitting process ... 
+
+2017-07-19 13:13:29.811029: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:29.811065: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:29.811072: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:29.811077: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:29.811082: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-19 13:13:29.849177: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2017-07-19 13:13:29.849211: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: gpu05.bc4.acrc.priv
+2017-07-19 13:13:29.849218: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: gpu05.bc4.acrc.priv
+2017-07-19 13:13:29.849269: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 367.48.0
+2017-07-19 13:13:29.849295: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  367.48  Sat Sep  3 18:21:08 PDT 2016
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+"""
+2017-07-19 13:13:29.849315: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 367.48.0
+2017-07-19 13:13:29.849323: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 367.48.0
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 15.7min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.950421
+(best score so far   = 0.950421)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 2 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.0006695621110972748, 'batch_size': 538, 'learning_rate_init': 0.00030189021818557087, 'n_units': 77}
+(gp took 0.000 s)
+
+Starting the fitting process ... 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Completed 0 iterations. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 15.7min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.943870
+(best score so far   = 0.950421)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 3 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.000606371544170018, 'batch_size': 355, 'learning_rate_init': 0.0003267242215528622, 'n_units': 68}
+(gp took 0.000 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 600 iterations. 
+
+Completed 800 iterations. 
+
+Completed 700 iterations. 
+
+Completed 900 iterations. 
+
+Completed 800 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 900 iterations. 
+
+Completed 100 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 200 iterations. 
+
+Completed 0 iterations. 
+
+Completed 300 iterations. 
+
+Completed 100 iterations. 
+
+Completed 400 iterations. 
+
+Completed 200 iterations. 
+
+Completed 500 iterations. 
+
+Completed 300 iterations. 
+
+Completed 600 iterations. 
+
+Completed 400 iterations. 
+
+Completed 700 iterations. 
+
+Completed 500 iterations. 
+
+Completed 800 iterations. 
+
+Completed 600 iterations. 
+
+Completed 900 iterations. 
+
+Completed 700 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 800 iterations. 
+
+Completed 100 iterations. 
+
+Completed 900 iterations. 
+
+Completed 200 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 300 iterations. 
+
+Completed 100 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 200 iterations. 
+
+Completed 600 iterations. 
+
+Completed 300 iterations. 
+
+Completed 700 iterations. 
+
+Completed 400 iterations. 
+
+Completed 800 iterations. 
+
+Completed 500 iterations. 
+
+Completed 900 iterations. 
+
+Completed 600 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 15.7min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.952145
+(best score so far   = 0.952145)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 4 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.0004033887860738957, 'batch_size': 50, 'learning_rate_init': 0.00030936526299021975, 'n_units': 48}
+(gp took 0.000 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 18.0min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.937323
+(best score so far   = 0.952145)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 5 trials
+Choosing next hyperparameters with gp...
+Completed 100 iterations. 
+
+  {'alpha': 0.00064276169191141179, 'batch_size': 538, 'learning_rate_init': 0.0001, 'n_units': 53}
+(gp took 83.904 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 300 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 400 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 500 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 600 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 15.8min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.953980
+(best score so far   = 0.953980)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             4 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 6 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.00057497483962432234, 'batch_size': 538, 'learning_rate_init': 0.00027014574212707882, 'n_units': 56}
+(gp took 33.564 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 800 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 900 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 100 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 200 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 300 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 16.0min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.949913
+(best score so far   = 0.953980)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             5 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 7 trials
+Choosing next hyperparameters with gp...
+Completed 400 iterations. 
+
+  {'alpha': 0.001, 'batch_size': 600, 'learning_rate_init': 0.00017379556603910719, 'n_units': 67}
+(gp took 26.136 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 600 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 700 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 800 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 900 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 15.6min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.953837
+(best score so far   = 0.953980)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             6 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 8 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.00062683064614909851, 'batch_size': 600, 'learning_rate_init': 0.00014849656300815897, 'n_units': 69}
+(gp took 31.984 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 100 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 200 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 300 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 400 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 15.4min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.953569
+(best score so far   = 0.953980)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             7 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 9 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.0008734169654681344, 'batch_size': 50, 'learning_rate_init': 0.00042514659697727984, 'n_units': 54}
+(gp took 20.505 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 600 iterations. 
+
+Completed 100 iterations. 
+
+Completed 700 iterations. 
+
+Completed 200 iterations. 
+
+Completed 800 iterations. 
+
+Completed 300 iterations. 
+
+Completed 900 iterations. 
+
+Completed 400 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 78.8min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.909603
+(best score so far   = 0.953980)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             4 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 1.0000000000000001e-05, 'batch_size': 600, 'learning_rate_init': 0.00050000000000000001, 'n_units': 30}
+(gp took 7.927 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 500 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 700 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 800 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 900 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 200 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 300 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 15.1min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.952392
+(best score so far   = 0.953980)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             5 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 11 trials
+Choosing next hyperparameters with gp...
+Completed 400 iterations. 
+
+  {'alpha': 0.00012889044334562277, 'batch_size': 538, 'learning_rate_init': 0.0002238187874598253, 'n_units': 66}
+(gp took 29.529 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 500 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 700 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 800 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 900 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 100 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 200 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 12.5min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.955078
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             6 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 12 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.0006603570614546286, 'batch_size': 111, 'learning_rate_init': 0.0004429279092843129, 'n_units': 79}
+(gp took 14.493 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 300 iterations. 
+
+Completed 200 iterations. 
+
+Completed 400 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 700 iterations. 
+
+Completed 900 iterations. 
+
+Completed 800 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 900 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 50.9min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.913966
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             8 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.00051788904202898153, 'batch_size': 50, 'learning_rate_init': 0.00034901225560658337, 'n_units': 47}
+(gp took 9.465 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 100 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 200 iterations. 
+
+Completed 800 iterations. 
+
+Completed 300 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 400 iterations. 
+
+Completed 100 iterations. 
+
+Completed 500 iterations. 
+
+Completed 200 iterations. 
+
+Completed 600 iterations. 
+
+Completed 300 iterations. 
+
+Completed 700 iterations. 
+
+Completed 400 iterations. 
+
+Completed 800 iterations. 
+
+Completed 500 iterations. 
+
+Completed 900 iterations. 
+
+Completed 600 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 700 iterations. 
+
+Completed 100 iterations. 
+
+Completed 800 iterations. 
+
+Completed 200 iterations. 
+
+Completed 900 iterations. 
+
+Completed 300 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 26.7min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.892653
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             7 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.00047985236743253265, 'batch_size': 600, 'learning_rate_init': 0.00036798201408677113, 'n_units': 51}
+(gp took 10.891 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 400 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 500 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 600 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 800 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 900 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 100 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 200 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 300 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 500 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 600 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 10.4min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.950339
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             8 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 15 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.00044150128952584786, 'batch_size': 600, 'learning_rate_init': 0.0003168818865144263, 'n_units': 50}
+(gp took 9.657 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 700 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 800 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 900 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed: 28.3min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.833344
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             9 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 16 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.00053278636078506571, 'batch_size': 416, 'learning_rate_init': 0.00033142166281068805, 'n_units': 48}
+(gp took 4.273 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 100 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 200 iterations. 
+
+Completed 500 iterations. 
+
+Completed 300 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 400 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Completed 500 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 600 iterations. 
+
+Completed 200 iterations. 
+
+Completed 700 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 800 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 900 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 400 iterations. 
+
+Completed 600 iterations. 
+
+Completed 500 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 600 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  5.3min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.936471
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            10 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 17 trials
+Choosing next hyperparameters with gp...
+Completed 700 iterations. 
+
+  {'alpha': 0.00054307723072660665, 'batch_size': 416, 'learning_rate_init': 0.00033424654846421161, 'n_units': 48}
+(gp took 4.818 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 800 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 900 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  9.5min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.950025
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             9 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 18 trials
+Choosing next hyperparameters with gp...
+ /mnt/storage/home/sa16246/anaconda2/lib/python2.7/site-packages/GPy/kern/src/stationary.py:229: RuntimeWarning:invalid value encountered in divide
+Completed 600 iterations. 
+
+  {'alpha': 0.00051697636510475019, 'batch_size': 477, 'learning_rate_init': 0.00035611821156034915, 'n_units': 55}
+(gp took 12.319 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 100 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 200 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 500 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 600 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 700 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 800 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 900 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 100 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  5.4min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.938055
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+10/10 models fit successfully.
+time:         July 19, 2017  4:23 PM
+elapsed:      3 hours, 10 minutes, 15 seconds.
+osprey worker exiting.
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  9.3min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.941141
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            10 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 19 trials
+Choosing next hyperparameters with gp...
+  {'alpha': 0.00054863439069496118, 'batch_size': 355, 'learning_rate_init': 0.00033317236107037121, 'n_units': 49}
+(gp took 5.086 s)
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+Starting the fitting process ... 
+
+Completed 0 iterations. 
+
+Completed 100 iterations. 
+
+Completed 200 iterations. 
+
+Completed 300 iterations. 
+
+Completed 400 iterations. 
+
+Completed 500 iterations. 
+
+Completed 600 iterations. 
+
+Completed 700 iterations. 
+
+Completed 800 iterations. 
+
+Completed 900 iterations. 
+
+Starting the predictions. 
+
+Starting the predictions. 
+
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  5.9min finished
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.939018
+(best score so far   = 0.955078)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+10/10 models fit successfully.
+time:         July 19, 2017  4:34 PM
+elapsed:      3 hours, 21 minutes, 21 seconds.
+osprey worker exiting.
