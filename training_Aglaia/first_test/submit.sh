@@ -9,4 +9,4 @@ module load libs/cudnn/8.0-cuda-8.0
 source activate py36
 
 cd $SLURM_SUBMIT_DIR
-osprey worker --n-iter 10 config.yaml
+mpirun -np 2 osprey worker --n-iter 20 config.yaml
