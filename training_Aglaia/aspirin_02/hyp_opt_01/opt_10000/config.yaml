@@ -1,0 +1,37 @@
+estimator:
+  pickle: model.pickl
+
+strategy:
+  name: gp
+  params:
+    seeds: 5
+
+search_space:
+  learning_rate_init:
+    min: 0.001
+    max: 0.05
+    type: float
+
+  alpha_reg:
+    min: 0.00001
+    max: 0.001
+    type: float
+
+  alpha_grad:
+    min: 0.00001
+    max: 0.5
+    type: float
+
+cv: 3
+
+dataset_loader:
+  name: joblib
+  params:
+    filenames: /mnt/storage/home/sa16246/repositories/trainingNN/training_Aglaia/aspirin_02/hyp_opt_01/opt_10000/data_10000.bz
+    x_name: coord
+    y_name: ene_forces    
+    system_joblib: True
+
+trials:
+    uri: sqlite:///osprey-trials.db
+

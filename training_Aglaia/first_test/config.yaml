@@ -8,8 +8,8 @@ strategy:
 
 search_space:
   learning_rate_init:
-    min: 0.01
-    max: 0.9
+    min: 0.001
+    max: 0.1
     type: float
 
   alpha_reg:
@@ -18,13 +18,13 @@ search_space:
     type: float
 
   alpha_grad:
-    min: 0.00001
+    min: 0.0001
     max: 0.05
     type: float
 
   alpha_force:
-    min: 0.00001
-    max: 0.05
+    min: 0.001
+    max: 0.5
     type: float
 
 cv: 3

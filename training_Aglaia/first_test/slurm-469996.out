@@ -1,0 +1,496 @@
+
+The following have been reloaded with a version change:
+  1) libs/cudnn/8.0-cuda-8.0 => libs/cudnn/5.1-cuda-8.0
+
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.1.0
+time:                October 12, 2017  2:50 PM
+hostname:            gpu01.bc4.acrc.priv
+cwd:                 /mnt/storage/home/sa16246/repositories/trainingNN/training_Aglaia/first_test
+pid:                 24877
+
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.1.0
+time:                October 12, 2017  2:50 PM
+hostname:            gpu02.bc4.acrc.priv
+cwd:                 /mnt/storage/home/sa16246/repositories/trainingNN/training_Aglaia/first_test
+pid:                 21615
+
+Loading config file:     config.yaml...
+Loading config file:     config.yaml...
+
+Loading dataset...
+
+
+Loading dataset...
+
+Dataset contains 500 element(s) with  labels
+The elements have shape: [(126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), ...]
+Instantiated estimator:
+  MLPRegFlow(alpha_force=0.9, alpha_grad=0.05, alpha_reg=0.0001, batch_size=20,
+      hidden_layer_sizes=(80,), hl1=None, hl2=None, hl3=None,
+      learning_rate_init=0.001, max_iter=1000)
+Hyperparameter search space:
+  learning_rate_init       	(float) 0.001000 <= x <  0.100000
+  alpha_reg                	(float) 0.000010 <= x <  0.001000
+  alpha_grad               	(float) 0.000100 <= x <  0.050000
+  alpha_force              	(float) 0.001000 <= x <  0.500000
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+Dataset contains 500 element(s) with  labels
+The elements have shape: [(126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), (126,), ...]
+Instantiated estimator:
+  MLPRegFlow(alpha_force=0.9, alpha_grad=0.05, alpha_reg=0.0001, batch_size=20,
+      hidden_layer_sizes=(80,), hl1=None, hl2=None, hl3=None,
+      learning_rate_init=0.001, max_iter=1000)
+Hyperparameter search space:
+  learning_rate_init       	(float) 0.001000 <= x <  0.100000
+  alpha_reg                	(float) 0.000010 <= x <  0.001000
+  alpha_grad               	(float) 0.000100 <= x <  0.050000
+  alpha_force              	(float) 0.001000 <= x <  0.500000
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 0 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.08375324033428616, 'alpha_reg': 0.0007377630800703143, 'alpha_grad': 0.010305020710569771, 'alpha_force': 0.17984871521266776}
+(gp took 0.000 s)
+
+History contains: 1 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.06813106681175274, 'alpha_reg': 0.0006697909859178718, 'alpha_grad': 0.02579153483557137, 'alpha_force': 0.33454174854802515}
+(gp took 0.000 s)
+
+2017-10-12 14:50:41.794913: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.794957: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.794966: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.794971: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.794977: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.839329: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.839375: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.839383: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.839389: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:41.839394: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 14:50:42.653218: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2017-10-12 14:50:42.653319: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: gpu01.bc4.acrc.priv
+2017-10-12 14:50:42.653330: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: gpu01.bc4.acrc.priv
+2017-10-12 14:50:42.653434: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.81.0
+2017-10-12 14:50:42.653485: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.81  Sat Sep  2 02:43:11 PDT 2017
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+"""
+2017-10-12 14:50:42.653519: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.81.0
+2017-10-12 14:50:42.653529: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.81.0
+2017-10-12 14:50:42.734649: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2017-10-12 14:50:42.734768: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: gpu02.bc4.acrc.priv
+2017-10-12 14:50:42.734780: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: gpu02.bc4.acrc.priv
+2017-10-12 14:50:42.734886: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.81.0
+2017-10-12 14:50:42.734937: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.81  Sat Sep  2 02:43:11 PDT 2017
+GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) 
+"""
+2017-10-12 14:50:42.734967: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.81.0
+2017-10-12 14:50:42.734975: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.81.0
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1662641127.750791
+(best score so far   = -1662641127.750791)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 2 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.034871763949772046, 'alpha_reg': 0.0004186714667427948, 'alpha_grad': 0.04153630498804637, 'alpha_force': 0.33983014387372473}
+(gp took 0.000 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1886918392.634929
+(best score so far   = -1662641127.750791)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 3 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.09386094406752213, 'alpha_reg': 0.0006240770813484507, 'alpha_grad': 0.04214442406015734, 'alpha_force': 0.05061562371094355}
+(gp took 0.000 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2418478123.012401
+(best score so far   = -1662641127.750791)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 4 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.005718312415000321, 'alpha_reg': 0.0008427689837465023, 'alpha_grad': 0.018975447004208154, 'alpha_force': 0.37348070994491583}
+(gp took 0.000 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1525999055.925828
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 5 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.072918402882049066, 'alpha_reg': 0.00062968438216374665, 'alpha_grad': 0.043087001447866993, 'alpha_force': 0.16536163137483739}
+(gp took 0.809 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1816411419.078714
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             4 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 6 trials
+Choosing next hyperparameters with gp...
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2945744058.274411
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             4 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 6 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.082852855747522769, 'alpha_reg': 0.00063849348664956598, 'alpha_grad': 0.022036867862601523, 'alpha_force': 0.093806291875354358}
+(gp took 0.664 s)
+
+  {'learning_rate_init': 0.070238395794491468, 'alpha_reg': 0.00065422842535227583, 'alpha_grad': 0.049438488897377439, 'alpha_force': 0.41385218424062364}
+(gp took 1.027 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1855733795.549242
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             5 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 8 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.068319793589842304, 'alpha_reg': 0.0004120660793716393, 'alpha_grad': 0.035310933298996539, 'alpha_force': 0.052538903427906958}
+(gp took 0.635 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1675123799.700061
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             5 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 9 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.033604083506139269, 'alpha_reg': 0.00075693018195348955, 'alpha_grad': 0.00021566773590331071, 'alpha_force': 0.48458278985881653}
+(gp took 0.652 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1884165393.838482
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             6 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.056818960921343635, 'alpha_reg': 0.0008249254199188188, 'alpha_grad': 0.011859639087300877, 'alpha_force': 0.079910968870015711}
+(gp took 0.662 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2440193775.276379
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             6 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 11 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.033707227014926899, 'alpha_reg': 0.00080126455844019469, 'alpha_grad': 0.018510328748599241, 'alpha_force': 0.10771110443710892}
+(gp took 0.667 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2059416750.462162
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             7 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 12 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.078819875284778934, 'alpha_reg': 0.00024653958436456319, 'alpha_grad': 0.022661419128776745, 'alpha_force': 0.21575232363047703}
+(gp took 0.661 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2438339127.665931
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             7 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.020268728665076331, 'alpha_reg': 0.00052702438098469319, 'alpha_grad': 0.004843583969707712, 'alpha_force': 0.45132644201547489}
+(gp took 0.647 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2675346494.313776
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             8 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.013826736016835744, 'alpha_reg': 0.00055368514510643213, 'alpha_grad': 0.024768061548027166, 'alpha_force': 0.2635412662603635}
+(gp took 0.600 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1731784452.375814
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             8 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 15 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.0023367617777792001, 'alpha_reg': 0.00075848867522662362, 'alpha_grad': 0.041040788018287318, 'alpha_force': 0.36199084592248332}
+(gp took 0.675 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -3010696058.183053
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             9 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 16 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.029826053317763775, 'alpha_reg': 0.00098096899448715021, 'alpha_grad': 0.012672864884182775, 'alpha_force': 0.36407352784640096}
+(gp took 0.650 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2793214906.346625
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             9 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 17 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.018372260990984882, 'alpha_reg': 0.00083932805138569992, 'alpha_grad': 0.00044938840899403666, 'alpha_force': 0.013514871403411875}
+(gp took 0.865 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2709689480.215833
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            10 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 18 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.094093804225531541, 'alpha_reg': 0.0006142278799894027, 'alpha_grad': 0.027428331107379345, 'alpha_force': 0.40737879919153308}
+(gp took 0.513 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2505582635.859527
+(best score so far   = -1525999055.925828)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            10 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 19 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.010306960759236462, 'alpha_reg': 0.00064818081397634611, 'alpha_grad': 0.018399989082158182, 'alpha_force': 0.44163905354871885}
+(gp took 0.635 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1522975603.881830
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            11 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 20 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.063627844551171819, 'alpha_reg': 0.000216698174556431, 'alpha_grad': 0.043599456843400372, 'alpha_force': 0.37256182932701604}
+(gp took 1.143 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2858906280.634885
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            11 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 21 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.012883090059349414, 'alpha_reg': 0.00020860025372249619, 'alpha_grad': 0.018084222132197705, 'alpha_force': 0.25662236987039966}
+(gp took 0.653 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1954551327.835101
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            12 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 22 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.051111193496078011, 'alpha_reg': 0.00039465297088714325, 'alpha_grad': 0.020643253526338095, 'alpha_force': 0.33228826600336203}
+(gp took 0.784 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2810794002.823395
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            12 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 23 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.00113492425654002, 'alpha_reg': 0.0007768185363274798, 'alpha_grad': 0.020734369903125924, 'alpha_force': 0.23858988552359822}
+(gp took 0.655 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -2149616491.897933
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            13 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 24 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.089038659998527239, 'alpha_reg': 2.3693873692530729e-05, 'alpha_grad': 0.0090820804395880424, 'alpha_force': 0.23274312590233309}
+(gp took 0.711 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -3033981554.262024
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            13 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 25 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.082149677074977362, 'alpha_reg': 0.0003090227926339396, 'alpha_grad': 0.0074259792373789456, 'alpha_force': 0.074249921889806225}
+(gp took 0.703 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1590361384.594834
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            14 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.032033111093266363, 'alpha_reg': 0.00056387587958590523, 'alpha_grad': 0.0065017349354024008, 'alpha_force': 0.17655971155695072}
+(gp took 0.671 s)
+
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = -1684946085.338794
+(best score so far   = -1522975603.881830)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            14 / 20
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 27 trials
+Choosing next hyperparameters with gp...
+  {'learning_rate_init': 0.014855330204391788, 'alpha_reg': 0.00024070235545671503, 'alpha_grad': 0.0018388471266169654, 'alpha_force': 0.14424994598376423}
+(gp took 0.656 s)
+
+slurmstepd: error: Job 469996 exceeded memory limit (1025812 > 1024000), being killed
+slurmstepd: error: Exceeded job memory limit
+mpirun: Forwarding signal 18 to job
+slurmstepd: error: *** JOB 469996 ON gpu01 CANCELLED AT 2017-10-12T18:34:45 ***
