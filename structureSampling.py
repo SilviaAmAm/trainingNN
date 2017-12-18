@@ -40,7 +40,7 @@ des_test = CoulombMatrix.CoulombMatrix(matrixX=X_test)
 X_prcm_test, y_test = des_test.generatePRCM(y_test,numRep=8)
 
 # Defining the estimator
-estimator = NNFlow.MLPRegFlow(max_iter=2000, batch_size=500, alpha=0.0005, learning_rate_init=0.0002, hidden_layer_sizes=(51,))
+estimator = NNFlow.MLPRegFlow(max_iter=2800, batch_size=500, alpha=0.0005, learning_rate_init=0.0002, hidden_layer_sizes=(51,))
 
 # Set up the cross validation set, for doing 5 k-fold validation
 cv_iter = modsel.KFold(n_splits=5)

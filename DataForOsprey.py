@@ -26,7 +26,7 @@ X, y, Q = imdat.loadPd_q('dataSets/PBE_B3LYP/pbe_b3lyp_partQ_rel.csv')
 # Generating the Partial Charge Coulomb matrix (diagonal elements are q_i^2 while the off diagonal elements
 # are q_i*q_j / R_ij)
 descr2 = PartialCharge.PartialCharges(X, y, Q)
-X_pccm, y_pccm = descr2.hybrid_pccm_1(numRep=5)
+X_pccm, y_pccm = descr2.generatePCCM(numRep=5)
 # X_pccm, y_pccm = descr2.generateUnrandomisedPCCM()
 # X_pccm_scal = preproc.StandardScaler().fit_transform(X_pccm)
 y_pccm = np.reshape(y_pccm, (len(y_pccm), 1))
@@ -57,7 +57,7 @@ data_pccm = np.append(X_pccm, y_pccm, axis=1)
 #
 # # Saving datasets to files
 # outfile1 = open('dataSets/PBE_B3LYP/prcm_notscal_pbeb3lyp.csv', 'w')
-outfile1 = open('dataSets/PBE_B3LYP/prcm_hyb_1.csv', 'w')
+outfile1 = open('dataSets/PBE_B3LYP/pr_pccm.csv', 'w')
 # outfile2 = open('dataSets/B3LYP_CC/data_pccm_b3lypcc.csv', 'w')
 # outfile3 = open('dataSets/B3LYP_CC/data_pccm24_b3lypcc.csv', 'w')
 # outfile4 = open('dataSets/B3LYP_CC/data_dpccm_b3lypcc.csv', 'w')
